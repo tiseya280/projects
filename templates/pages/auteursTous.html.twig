@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+{{include('pages/header.html')}}
+<h1> Auteurs celebres </h1>
+{{ adjectif }} :
+<table border ='1'>
+<tr><th width='100'>ID</th><th width='200'>Date de naissance</th><th width='100'>Ville</th></th><th width='100'>Photo</th></tr>
+{% for user in auteur %}
+<tr>
+<td>
+{{ user.getId() }}</td>
+<td>{{ user.getDateNaissance()}}</td>
+<td>{{ user.getVille()}}</td>
+<td>{{ user.getPhoto()}}</td>
+</tr>
+{% endfor %}
+</table>
+{{include ('pages/footer.html')}}
+{% endblock %}

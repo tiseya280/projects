@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+{{include('pages/header.html')}}
+<h1> Auteurs celebres </h1>
+{{ adjectif }} :
+{{ user.getId() }}
+{{ user.getVille()}}
+{{ user.getPhoto()}}
+{{include ('pages/footer.html')}}
+{% endblock %}
